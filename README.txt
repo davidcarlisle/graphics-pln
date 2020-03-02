@@ -10,7 +10,7 @@ These files are *NOT* supported by the LaTeX3 project, and any
 problems with them should *NOT* be reported to the LaTeX bugs system.
 
 Problems should be reported as issues at
-https://github.com/davidcarlisle/dpctex/tree/master/graphics-pln
+https://github.com/davidcarlisle/graphics-pln/issues
 
 
 David Carlisle 1995/01/29
@@ -18,8 +18,9 @@ David Carlisle 1995/01/29
 	       2016/08/17
 	       2017/06/01
 	       2018/01/16
+	       2020/03/02
 
-Copyright 1995 1996 2016 2017 2018 David Carlisle
+Copyright 1995 1996 2016 2017 2018 2020 David Carlisle
 
    All the files in this directory may be redistributed and/or modified
    under the terms of the LaTeX Project Public License distributed from
