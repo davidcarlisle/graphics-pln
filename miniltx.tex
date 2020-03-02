@@ -247,6 +247,16 @@
     {\def\reserved@a{\renew@command\reserved@a}}%
    \reserved@a}%
 
+\def\x@protect#1{%
+  \ifx\protect\@typeset@protect\else
+    \@x@protect#1%
+  \fi
+}
+\def\@x@protect#1\fi#2#3{%
+  \fi\protect#1%
+}
+\let\@typeset@protect\relax
+
 \def\@ifundefined#1{%
   \expandafter\ifx\csname#1\endcsname\relax
     \expandafter\@firstoftwo
