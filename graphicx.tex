@@ -29,8 +29,13 @@
 \ifx\detokenize\@undefined
   \def\detokenize#1{#1}
 \fi
+\let\GRAPHICS@protected
+\ifx\protected\@undefined
+  \let\protected\relax
+\fi
 \input graphicx.sty
 \let\detokenize\GRAPHICS@detokenize
+\let\protected\GRAPHICS@protected
 
 \resetatcatcode
 
