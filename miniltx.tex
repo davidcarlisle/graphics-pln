@@ -2,7 +2,7 @@
 %%%
 %%% Parts of LaTeX: Slightly changed/simplified in places.
 %%% Changes 
-%%%    Copyright 1996-2021 David Carlisle LaTeX3 Project
+%%%    Copyright 1996-2022 David Carlisle LaTeX3 Project
 %%% Original Code
 %%%    Copyright 1993-1996 LaTeX3 Project and original authors
 %%%
@@ -28,6 +28,8 @@
 %  2019/07/20 more updates for latex drivers
 %  2020/03/02 move to own git repository and add newcommand fix from issue #2
 %  2021/11/15 Define \@backslashchar for issue #4
+%  2022/06/13 Define \@ehd error help (usedby color errors)
+%             Define fallback \mathcolor so color package does not require expl3
 
 \edef\resetatcatcode{\catcode`\noexpand\@\the\catcode`\@\relax}
 
@@ -325,6 +327,8 @@
 
 \def\on@line{ on input line \the\inputlineno}
 \ifx\@ehc\@undefined\def\@ehc{}\fi
+% 2022/06/13
+\ifx\@ehd\@undefined\def\@ehd{}\fi
 
 \def\PackageError#1#2#3{{%
   \newlinechar`\^^J\def\MessageBreak{^^J\space\space#1: }%
