@@ -3,7 +3,9 @@
 
 \input miniltx
 
-
+% \outer :(
+\let\OUTER@newdimen\newdimen
+\expandafter\def\expandafter\newdimen\expandafter{\newdimen}
 
 \ifx\Gin@driver\@undefined
   \ifx\directlua\@undefined
@@ -22,11 +24,11 @@
 \fi
 
 
-
 \let\@color@protected\protected
 \expandafter\@gobble\csname protected\endcsname
 
 \input color.sty
 
+\let\newdimen\OUTER@newdimen
 \let\protected\@color@protected
 \resetatcatcode
