@@ -9,9 +9,6 @@
  \let\ttfamily\tt
 \fi
 
-% \outer :(
-\let\OUTER@newdimen\newdimen
-\expandafter\def\expandafter\newdimen\expandafter{\newdimen}
 
 \ifx\Gin@driver\@undefined
   \ifx\directlua\@undefined
@@ -40,7 +37,6 @@
 \fi
 \input graphicx.sty
 
-\let\newdimen\OUTER@newdimen
 \let\detokenize\GRAPHICS@detokenize
 \let\protected\GRAPHICS@protected
 \resetatcatcode

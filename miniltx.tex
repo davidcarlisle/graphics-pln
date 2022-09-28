@@ -30,6 +30,7 @@
 %  2021/11/15 Define \@backslashchar for issue #4
 %  2022/06/13 Define \@ehd error help (usedby color errors)
 %             Define fallback \mathcolor so color package does not require expl3
+%  2022/09/28 Make \newdimen non-\outer for nw .def files
 
 \edef\resetatcatcode{\catcode`\noexpand\@\the\catcode`\@\relax}
 
@@ -548,3 +549,7 @@
   \long\def\mlx@mathcolora[#1]#2#3{\color[#1]{#2}#3\endgroup}
   \long\def\mlx@mathcolorb#1#2{\color{#1}#2\endgroup}
 \fi
+
+% 2022/09/28
+% remove outerness
+\expandafter\def\expandafter\newdimen\expandafter{\newdimen}
