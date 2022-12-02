@@ -21,10 +21,11 @@
 \fi
 
 
-\let\@color@protected\protected
+\let\@color@ifcsname\ifcsname
 \expandafter\@gobble\csname protected\endcsname
+\def\ifcsname mathcolor\endcsname{\iftrue\let\ifcsname\@color@ifcsname}
 
 \input color.sty
 
-\let\protected\@color@protected
+
 \resetatcatcode

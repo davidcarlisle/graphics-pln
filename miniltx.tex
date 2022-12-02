@@ -545,7 +545,8 @@
 % 2022/06/13
 \ifx\mathcolor\@undefined
   % simplified version of \mathcolor
-  \protected\def\mathcolor{\begingroup\@ifnextchar[\mlx@mathcolora\mlx@mathcolorb}
+% 2022/12/02
+  \csname protected\endcsname\def\mathcolor{\begingroup\@ifnextchar[\mlx@mathcolora\mlx@mathcolorb}
   \long\def\mlx@mathcolora[#1]#2#3{\color[#1]{#2}#3\endgroup}
   \long\def\mlx@mathcolorb#1#2{\color{#1}#2\endgroup}
 \fi
