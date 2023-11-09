@@ -30,7 +30,8 @@
 %  2021/11/15 Define \@backslashchar for issue #4
 %  2022/06/13 Define \@ehd error help (usedby color errors)
 %             Define fallback \mathcolor so color package does not require expl3
-%  2022/09/28 Make \newdimen non-\outer for nw .def files
+%  2022/09/28 Make \newdimen non-\outer for new .def files
+%  2023/11/09Guard against \@hash@ already being let to #
 
 \edef\resetatcatcode{\catcode`\noexpand\@\the\catcode`\@\relax}
 
@@ -186,6 +187,7 @@
   \else
     \@x@protect#1%
   \fi}
+\let\@hash@\relax
 \long\def\@yargdef#1#2#3{%
   \@tempcnta#3\relax
   \advance \@tempcnta \@ne

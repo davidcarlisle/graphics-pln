@@ -25,9 +25,10 @@ David Carlisle
 2022/06/13  
 2022/09/27  
 2022/09/28  
-2022/12/02
+2022/12/02  
+2023/11/09
 
-Copyright 1995 1996 2016 2017 2018 2020 2021 2022 David Carlisle
+Copyright 1995-2023 David Carlisle
 
    All the files in this directory may be redistributed and/or modified
    under the terms of the LaTeX Project Public License distributed from
